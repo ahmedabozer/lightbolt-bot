@@ -1,0 +1,90 @@
+{
+    "name": "LightBolt Music",
+    "short_name": "LightBolt",
+    "version": "1.0.0",
+    "description": "Stream and download music through Telegram",
+    "author": "Your Name",
+    "telegram_app_url": "https://t.me/LightBoltBot",
+    "bot_username": "LightBoltBot",
+    
+    "viewport": {
+        "width": "device-width",
+        "initial_scale": 1,
+        "maximum_scale": 1,
+        "user_scalable": false
+    },
+    
+    "permissions": [
+        "clipboard-write",
+        "audio"
+    ],
+    
+    "supported_platforms": [
+        "android",
+        "ios",
+        "web"
+    ],
+    
+    "color_scheme": {
+        "light": {
+            "bg_color": "#ffffff",
+            "text_color": "#000000",
+            "hint_color": "#999999",
+            "link_color": "#2481cc",
+            "button_color": "#2481cc",
+            "button_text_color": "#ffffff"
+        },
+        "dark": {
+            "bg_color": "#212121",
+            "text_color": "#ffffff",
+            "hint_color": "#aaaaaa",
+            "link_color": "#58a6ff",
+            "button_color": "#58a6ff",
+            "button_text_color": "#ffffff"
+        }
+    },
+    
+    "icons": {
+        "192": "img/icon-192.png",
+        "512": "img/icon-512.png"
+    },
+    
+    "features": {
+        "search": {
+            "enabled": true,
+            "placeholder": "Search for music..."
+        },
+        "playlists": {
+            "enabled": true,
+            "max_playlists": 50,
+            "max_songs_per_playlist": 1000
+        },
+        "downloads": {
+            "enabled": true,
+            "concurrent_downloads": 3
+        },
+        "player": {
+            "enabled": true,
+            "features": [
+                "play",
+                "pause",
+                "next",
+                "previous",
+                "seek",
+                "repeat",
+                "shuffle"
+            ]
+        }
+    },
+    
+    "api": {
+        "version": "1.0",
+        "base_url": "https://api.lightbolt.app",
+        "endpoints": {
+            "search": "/search",
+            "playlists": "/playlists",
+            "downloads": "/downloads",
+            "stream": "/stream"
+        }
+    }
+}
